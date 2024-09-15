@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional landing page of Tanveer Hassan, showcasing skills, projects, awards, and more.">
+    <meta name="keywords" content="landing page, portfolio, professional profile, skills, projects, awards">
+    <meta name="author" content="[Tanveer Hassan]">
+    <title id="page-title">Tanveer Hassan - Professional Portfolio Landing Page</title>
+    <style>
+       
+     /* Add FontAwesome for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-right: 4%;
+    flex-wrap: wrap;
+}
+
+.nav-brand h1 {
+    margin: 0;
+    
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #0056b3;
+    border-radius: 4px;
+}
+
+.container {
+    padding: 10% 4% 2%; 
+    padding-top: calc(25px + 10%); /* Add padding-top to accommodate the fixed header */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-top: calc(55px + 10%); /* Ensure extra padding for mobile views */
+    }
+}
+
+
+.section {
+    margin-bottom: 40px;
+}
+.section-titl {
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 20px;
+    
+    padding-bottom: 10px;
+    
+}
+.section-title {
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 1.1em;
+    color: #666;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.social-feed iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 8px;
+}
+
+.intro-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.intro-description {
+    flex: 0 0 55%;
+}
+
+.intro-image {
+    flex: 0 0 45%;
+    text-align: center;
+}
+
+.intro-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .intro-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-description,
+    .intro-image {
+        flex: 0 0 auto;
+        text-align: center;
+    }
+
+    .intro-image img {
+        max-width: 100%;
+    }
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.project-card {
+    flex: 1 1 calc(33.333% - 20px); /* Adjust to fit 3 in a row with gap */
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        flex: 1 1 100%; /* Stack cards on smaller screens */
+    }
+}
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.skill-card {
+    flex: 1 1 45%; /* Ensure cards take up to 45% width each */
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column; /* Stack skill cards vertically */
+        /* Center align cards */
+    }
+
+    .skill-card {
+        flex: 1 1 100%; /* Make each skill card take full width on smaller screens */
+    }
+}
+
+.skill-bar {
+    margin: 10px 0;
+}
+
+.skill-bar .skill-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.skill-bar .progress-bar {
+    height: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-bar .progress-bar div {
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+.awards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.award-card {
+    flex: 1 1 calc(50% - 20px); /* Adjust to fit 2 in a row with gap */
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .award-card {
+        flex: 1 1 100%; /* Stack cards on smaller screens */
+    }
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 4%;
+    margin-top: 20px;
+}
+
+.contact-form, .contact-info {
+    flex: 1 1 45%;
+    /* Take up 45% of the width each, with 10% gap in between */
+    box-sizing: border-box;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.contact-info h2 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-form, .contact-info 
+    {
+        flex: 1 1 100%;
+        padding: 4%;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-brand">
+                <h1 id="header-title">Muhammad Tanveer Hassan</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#projects" id="link-projects">Projects</a>
+                <a href="#skills" id="link-skills">Skills</a>
+                <a href="#awards" id="link-awards">Awards</a>
+                <a href="#education" id="link-education">Education</a>
+                <a href="#contact" id="link-contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="intro" class="section">
+            <div class="intro-content">
+                <div class="intro-description">
+                    <div class="section-titl" id="intro-title">Welcome to My Portfolio Page</div>
+                    <p id="intro-text">Welcome to my professional portfolio. I am Tanveer Hassan, a passionate software developer with a keen interest in web technologies, AI, and machine learning. I love to explore new technologies and apply them in my projects.<br><br> With a strong background in computer science, I have honed my skills in various programming languages and frameworks. I am always eager to learn and grow, continuously seeking new challenges to enhance my expertise.<br> <br>This portfolio showcases my skills, projects, and achievements. Feel free to explore and get in touch if you have any questions or opportunities to discuss.</p>
+                </div>
+                <div class="intro-image">
+                    <img src="image.jpg" alt="Tanveer Hassan">
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="section-title" id="projects-title">Projects</div>
+            <div class="projects-container">
+                <div class="card project-card">
+                    <div class="card-title" id="project-a-title">Ecommerce Site</div>
+                    <div class="card-description" id="project-a-description">
+                        <p><a href="https://ilovedigitizing.com/">I Love Digitizing</a></p>
+                        <p>Date: September 2024</p>
+                    </div>
+                </div>
+                <div class="card project-card">
+                    <div class="card-title" id="project-b-title">Gaming Blogs Site</div>
+                    <div class="card-description" id="project-b-description">
+                        <p><a href="https://gamingexpert.info/">Gaming Experts</a></p>
+                        <p>Date: October 2023</p>
+                    </div>
+                </div>
+                <div class="card project-card">
+                    <div class="card-title" id="project-c-title">Portfolio Site</div>
+                    <div class="card-description" id="project-c-description">
+                        <p>Portfolio Site of Graphic Designer</p>
+                        <p>Date: January 2024</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="section-title" id="skills-title">Skills</div>
+            <div class="skills-container">
+                <div class="card skill-card">
+                    <div class="card-title" id="hard-skills-title">Hard Skills</div>
+                    <div class="card-description" id="hard-skills-description">
+                        <div class="skill-bar">
+                            <div class="skill-title">HTML/CSS <span>95%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-title">JavaScript <span>40%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 40%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-title">C/C++ <span>70%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-title">Designing Skill <span>90%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card skill-card">
+                    <div class="card-title" id="soft-skills-title">Soft Skills</div>
+                    <div class="card-description" id="soft-skills-description">
+                        <div class="skill-bar">
+                            <div class="skill-title">Communication <span>85%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-title">Problem-Solving <span>75%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-title">Time Management <span>80%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="awards" class="section">
+            <div class="section-title" id="awards-title">Awards & Certifications</div>
+            <div class="awards-container">
+                <div class="card award-card">
+                    <div class="card-title" id="award-a-title">DigiSkills</div>
+                    <div class="card-description" id="award-a-description">
+                        <p>Top Scorer at Digiskils</p>
+                        <p>Date: June 2023</p>
+                    </div>
+                </div>
+                <div class="card award-card">
+                    <div class="card-title" id="award-b-title">Cooding Champ</div>
+                    <div class="card-description" id="award-b-description">
+                        <p>Participation in Cooding Champ</p>
+                        <p>Date: July 2023</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="education" class="section">
+            <div class="section-title" id="education-title">Education</div>
+            <div class="card">
+                <div class="card-title" id="education-a-title">Bachelors in Computer Science</div>
+                <div class="card-description" id="education-a-description">
+                    <p>Doing Bscs22144 From ITU Lahore</p>
+                    <p>Date: September 2022</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="section-title" id="contact-title">Contact</div>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form action="your-form-processing-url" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Feel free to ask any query or give feedback. I'm always open to discuss new projects, creative ideas, or opportunities to be part of your visions.</p>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:bscs22144@itu.edu.pk">bscs22144@itu.edu.pk</a></p>
+                    <p><i class="fas fa-phone"></i> Phone: <a href="tel:+923154789820">+923154789820</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Address: ITU Lahore, Pakistan</p>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="video" class="section">
+            <div class="section-title" id="video-title">Video</div>
+            <div class="card">
+                <video controls>
+                    <source src="your-video-file.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <section id="social-feed" class="section">
+            <div class="section-title" id="social-feed-title">Social Feed</div>
+            <div class="social-feed">
+                <iframe src="https://www.instagram.com/p/CxlQo2rLeSo/embed" allowfullscreen></iframe>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Tanveer Hassan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
