@@ -18,12 +18,12 @@ body
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #f5f5f5;
+    background-color: #e6e6e6;
 }
 
 header 
 {
-    background: #007bff;
+    background: #0e0e0e;
     color: #fff;
     padding: 15px 20px;
     position: fixed;
@@ -41,6 +41,13 @@ nav
     padding-right: 4%;
     flex-wrap: wrap;
 }
+@media (max-width: 768px) 
+{
+    nav{
+        display: none;
+
+    }
+}
 
 .nav-brand h1 
 {
@@ -57,15 +64,17 @@ nav
 
 .nav-links a 
 {
-    color: #fff;
+    color: #020202;
     text-decoration: none;
     padding: 8px 12px;
     transition: background-color 0.3s;
+    background-color: #ffffff;
+    border-radius: 4px;
 }
 
 .nav-links a:hover 
 {
-    background-color: #0056b3;
+    background-color: #ffffff;
     border-radius: 4px;
 }
 
@@ -80,6 +89,7 @@ nav
     .container 
     {
         padding-top: calc(55px + 10%); 
+        width: 100%;
     }
 }
 
@@ -201,7 +211,7 @@ video
 
 .project-card 
 {
-    flex: 1 1 calc(33.333% - 20px); /* Adjust to fit 3 in a row with gap */
+    flex: 1 1 calc(33.333% - 20px); 
     box-sizing: border-box;
 }
 
@@ -209,7 +219,7 @@ video
 {
     .project-card 
     {
-        flex: 1 1 100%; /* Stack cards on smaller screens */
+        flex: 1 1 100%; 
     }
 }
 .skills-container 
@@ -222,7 +232,7 @@ video
 
 .skill-card 
 {
-    flex: 1 1 45%; /* Ensure cards take up to 45% width each */
+    flex: 1 1 45%; 
     box-sizing: border-box;
 }
 
@@ -230,13 +240,13 @@ video
 {
     .skills-container 
     {
-        flex-direction: column; /* Stack skill cards vertically */
-        /* Center align cards */
+        flex-direction: column; 
+        
     }
 
     .skill-card 
     {
-        flex: 1 1 100%; /* Make each skill card take full width on smaller screens */
+        flex: 1 1 100%; 
     }
 }
 
@@ -277,7 +287,7 @@ video
 
 .award-card 
 {
-    flex: 1 1 calc(50% - 20px); /* Adjust to fit 2 in a row with gap */
+    flex: 1 1 calc(50% - 20px); 
     box-sizing: border-box;
 }
 
@@ -285,7 +295,7 @@ video
 {
     .award-card 
     {
-        flex: 1 1 100%; /* Stack cards on smaller screens */
+        flex: 1 1 100%; 
     }
 }
 
@@ -401,7 +411,7 @@ video
                     <p id="intro-text">Welcome to my professional portfolio. I am Tanveer Hassan, a passionate software developer with a keen interest in web technologies, AI, and machine learning. I love to explore new technologies and apply them in my projects.<br><br> With a strong background in computer science, I have honed my skills in various programming languages and frameworks. I am always eager to learn and grow, continuously seeking new challenges to enhance my expertise.<br> <br>This portfolio showcases my skills, projects, and achievements. Feel free to explore and get in touch if you have any questions or opportunities to discuss.</p>
                 </div>
                 <div class="intro-image">
-                    <img src="image.jpg" alt="Tanveer Hassan">
+                    <img src="" alt="Tanveer Hassan">
                 </div>
             </div>
         </section>
@@ -412,21 +422,21 @@ video
                 <div class="card project-card">
                     <div class="card-title" id="project-a-title">Ecommerce Site</div>
                     <div class="card-description" id="project-a-description">
-                        <p><a href="https://ilovedigitizing.com/">I Love Digitizing</a></p>
+                        <p><a href="https://ilovedigitizing.com/" style="text-decoration: none;">I Love Digitizing</a></p>
                         <p>Date: September 2024</p>
                     </div>
                 </div>
                 <div class="card project-card">
                     <div class="card-title" id="project-b-title">Gaming Blogs Site</div>
                     <div class="card-description" id="project-b-description">
-                        <p><a href="https://gamingexpert.info/">Gaming Experts</a></p>
+                        <p><a href="https://gamingexpert.info/" style="text-decoration: none;">Gaming Experts</a></p>
                         <p>Date: October 2023</p>
                     </div>
                 </div>
                 <div class="card project-card">
                     <div class="card-title" id="project-c-title">Portfolio Site</div>
                     <div class="card-description" id="project-c-description">
-                        <p>Portfolio Site of Graphic Designer</p>
+                        <p>Zaman Graphics</p>
                         <p>Date: January 2024</p>
                     </div>
                 </div>
@@ -559,17 +569,17 @@ video
         <section id="video" class="section">
             <div class="section-title" id="video-title">Video</div>
             <div class="card">
-                <video controls>
-                    <source src="your-video-file.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+               
+                
+                    <iframe id= "social_video"src="http://www.youtube.com/embed/eoGkJWgxurQ" frameborder="0" allowfullscreen></iframe>
+                
             </div>
         </section>
 
         <section id="social-feed" class="section">
             <div class="section-title" id="social-feed-title">Social Feed</div>
             <div class="social-feed">
-                <iframe src="https://www.instagram.com/p/CxlQo2rLeSo/embed" allowfullscreen></iframe>
+                <iframe id="video" src="https://www.instagram.com/p/CxlQo2rLeSo/embed" allowfullscreen></iframe>
             </div>
         </section>
 
